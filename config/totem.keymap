@@ -41,18 +41,18 @@
     };
 
     macros {
-        my_dot: DOT {
+        DOT_RU: DOT_RU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(KP_DOT) &kp SPACE>;
-            label = "DOT";
+            label = "DOT_RU";
         };
 
-        my_comma: COMMA {
+        COMMA_RU: COMMA_RU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp KP_DOT &kp SPACE>;
-            label = "COMMA";
+            label = "COMMA_RU";
         };
     };
 
@@ -100,7 +100,7 @@
             bindings = <
        &none  &none  &none      &none     &none    &none             &kp LG(LEFT)  &kp LG(UP)  &kp LG(RIGHT)  &kp LBKT
        &none  &none  &kp LSHFT  &kp LALT  &none    &kp LEFT          &kp DOWN      &kp UP      &kp RIGHT      &kp APOS
-&none  &none  &none  &none      &none     &none    &kp GRAVE         &none         &my_comma   &my_dot        &none     &none
+&none  &none  &none  &none      &none     &none    &kp GRAVE         &none         &COMMA_RU   &DOT_RU        &none     &none
                      &none      &mo 4     &none    &kp LEFT_COMMAND  &none         &none
             >;
         };
