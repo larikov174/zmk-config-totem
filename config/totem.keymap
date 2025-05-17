@@ -38,28 +38,21 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 0>;
-        };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
+        my_dot: DOT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&kp LS(KP_DOT) &kp SPACE>;
+            label = "DOT";
+        };
+
+        my_comma: COMMA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT &kp SPACE>;
+            label = "COMMA";
         };
     };
 
@@ -96,19 +89,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W    &kp E                    &kp R                 &kp T          &kp Y            &kp U                 &kp I                   &kp O    &kp P
-           &kp A  &lt 3 S  &home_row LEFT_SHIFT D   &home_row LEFT_ALT F  &kp G          &kp H            &home_row LEFT_ALT J  &home_row LEFT_SHIFT K  &kp L    &kp SEMI
-&kp LSHFT  &kp Z  &kp X    &kp C                    &kp V                 &kp B          &kp N            &kp M                 &kp COMMA               &kp DOT  &kp FSLH  &kp LSHFT
-                           &mt LEFT_CONTROL ESCAPE  &kp LEFT_COMMAND      &lt 1 SPACE    &lt 2 BACKSPACE  &kp ENTER             &kp TAB
+               &kp Q  &kp W    &kp E                    &kp R                 &kp T          &kp Y            &kp U                 &kp I                   &kp O    &kp P
+               &kp A  &lt 3 S  &home_row LEFT_SHIFT D   &home_row LEFT_ALT F  &kp G          &kp H            &home_row LEFT_ALT J  &home_row LEFT_SHIFT K  &kp L    &kp SEMI
+&kp LA(LG(I))  &kp Z  &kp X    &kp C                    &kp V                 &kp B          &kp N            &kp M                 &kp COMMA               &kp DOT  &kp FSLH  &kp LC(L)
+                               &mt LEFT_CONTROL ESCAPE  &kp LEFT_COMMAND      &lt 1 SPACE    &lt 2 BACKSPACE  &kp ENTER             &kp TAB
             >;
         };
 
         NAV {
             bindings = <
-       &none  &none  &none      &none     &none    &none                   &kp LG(LEFT)  &kp LG(UP)  &kp LG(RIGHT)  &kp LBKT
-       &none  &none  &kp LSHFT  &kp LALT  &none    &kp LEFT                &kp DOWN      &kp UP      &kp RIGHT      &kp APOS
-&none  &none  &none  &none      &none     &none    &kp GRAVE               &none         &none       &none          &none     &none
-                     &none      &mo 4     &none    &mt LEFT_COMMAND LC(L)  &none         &none
+       &none  &none  &none      &none     &none    &none             &kp LG(LEFT)  &kp LG(UP)  &kp LG(RIGHT)  &kp LBKT
+       &none  &none  &kp LSHFT  &kp LALT  &none    &kp LEFT          &kp DOWN      &kp UP      &kp RIGHT      &kp APOS
+&none  &none  &none  &none      &none     &none    &kp GRAVE         &none         &my_comma   &my_dot        &none     &none
+                     &none      &mo 4     &none    &kp LEFT_COMMAND  &none         &none
             >;
         };
 
@@ -125,7 +118,7 @@
             bindings = <
        &none  &none  &kp PAGE_UP    &kp LS(LC(LG(NUMBER_4)))  &kp LS(LG(NUMBER_4))    &none  &none  &none  &none  &none
        &none  &none  &kp PAGE_DOWN  &kp LG(Z)                 &none                   &none  &none  &none  &none  &none
-&none  &none  &none  &none          &none                     &none                   &none  &none  &none  &none  &none  &none
+&none  &none  &none  &kp LS(F6)     &kp F6                    &none                   &none  &none  &none  &none  &none  &none
                      &none          &none                     &none                   &none  &none  &none
             >;
         };
