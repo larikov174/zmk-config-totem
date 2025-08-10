@@ -40,7 +40,7 @@
         };
 
         LANG {
-            bindings = <&kp LC(L)>;
+            bindings = <&kp LC(LA(SPACE))>;
             key-positions = <17 18>;
         };
     };
