@@ -105,17 +105,17 @@
             bindings = <
                      &none  &none             &none      &none     &none    &none      &kp LG(LEFT)  &kp LG(UP)  &kp LG(RIGHT)  &kp LBKT
                      &none  &kp LEFT_COMMAND  &kp LSHFT  &kp LALT  &none    &kp LEFT   &kp DOWN      &kp UP      &kp RIGHT      &kp APOS
-&kp LS(LC(C_POWER))  &none  &none             &none      &none     &none    &kp GRAVE  &none         &COMMA_RU   &DOT_RU        &none     &none
+&kp LS(LC(C_POWER))  &none  &none             &none      &none     &none    &kp GRAVE  &none         &COMMA_RU   &DOT_RU        &none     &kp RBKT
                                               &none      &mo 4     &none    &kp ENTER  &kp DELETE    &none
             >;
         };
 
         NUM {
             bindings = <
-       &none      &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &mt LS(MINUS) MINUS       &kp C_VOLUME_UP    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
-       &none      &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &mt LS(EQUAL) EQUAL       &kp C_VOLUME_DOWN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none
-&none  &kp TILDE  &mt LS(N1) N1  &mt LS(N2) N2  &mt LS(N3) N3  &kp PIPE                  &none              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &none
-                                 &none          &mt LS(N0) N0  &mt LEFT_COMMAND SPACE    &none              &none                 &none
+       &none                &mt LS(N7) N7  &mt LS(N8) N8  &mt LS(N9) N9  &mt LS(MINUS) MINUS       &kp C_VOLUME_UP    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
+       &none                &mt LS(N4) N4  &mt LS(N5) N5  &mt LS(N6) N6  &mt LS(EQUAL) EQUAL       &kp C_VOLUME_DOWN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none  &none
+&none  &mt TILDE BACKSLASH  &mt LS(N1) N1  &mt LS(N2) N2  &mt LS(N3) N3  &kp PIPE                  &none              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &none
+                                           &none          &mt LS(N0) N0  &mt LEFT_COMMAND SPACE    &none              &none                 &none
             >;
         };
 
